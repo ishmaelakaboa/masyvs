@@ -1,31 +1,28 @@
 <!-- Menu with dropdown + Button -->
 <header class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm">
   <div class="container">
-    <a href="#" class="navbar-brand">
-      <!--<img src="assets/img/logo.svg" width="47" alt="Silicon">-->
-      Masyvs
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1" aria-expanded="false">
+    <%= link_to "Masyvs", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDarkCollapse" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <nav id="navbarCollapse1" class="collapse navbar-collapse">
-      <hr class="d-lg-none mt-3 mb-2">
+    <nav id="navbarDarkCollapse" class="collapse navbar-collapse">
+      <hr class="d-lg-none text-light opacity-15 mt-3 mb-2">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a href="#" class="nav-link active">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">About</a>
+          <%= link_to "About", home_about_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-dark">
             <li>
               <a href="#" class="dropdown-item">Staffing</a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Aptitude Tests</a>
-              <ul class="dropdown-menu">
+              <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">Aptitude Tests</a>
+              <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="#">NCLEX</a></li>
                 <li><a class="dropdown-item" href="#">GRE/GMAT</a></li>
                 <li><a class="dropdown-item" href="#">ACT/SAT</a></li>
@@ -56,3 +53,5 @@
     </nav>
   </div>
 </header>
+
+
